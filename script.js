@@ -65,6 +65,47 @@ if (departureDateInput && returnDateInput) {
     });
 }
 
+const destinationSelect = document.getElementById('destination');
+const adultsInput = document.getElementById('adults');
+const childrenInput = document.getElementById('children');
+const totalPriceField = document.getElementById('totalPrice');
+
+function calculateTotalPrice() {
+    if (!destinationSelect || !adultsInput || !totalPriceField) return;
+    
+    const selectedOption = destinationSelect.options[destinationSelect.selectedIndex];
+    const basePrice = parseInt(selectedOption.getAttribute('data-price')) || 0;
+    const adults = parseInt(adultsInput.value) || 0;
+    const children = parseInt(childrenInput?.value || 0);
+    
+    const childPrice = basePrice * 0.7;
+    const totalPrice = (basePrice * adults) + (childPrice * children);
+    
+    totalPriceField.value = totalPrice > 0 ? `$${totalPrice.toLocaleString()}` : '$0';
+}
+
+if (destinationSelect) {
+    destinationSelect.addEventListener('change', calculateTotalPrice);
+}
+
+if (adultsInput) {
+    adultsInput.addEventListener('input', calculateTotalPrice);
+}
+
+if (childrenInput) {
+    childrenInput.addEventListener('input', calculateTotalPrice);
+}
+
+const newsletterForm = document.querySelector('.newsletter-form');
+if (newsletterForm) {
+    newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = e.target.querySelector('input[type="email"]').value;
+        alert(`Thank you for subscribing! We'll send updates to ${email}`);
+        e.target.reset();
+    });
+}
+
 const scrollElements = document.querySelectorAll('.destination-card, .feature-item, .gallery-item');
 
 const elementInView = (el, offset = 100) => {

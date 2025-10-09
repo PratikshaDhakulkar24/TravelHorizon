@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings - TravelWise</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">TravelWise</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="booking.html">Book Now</a></li>
+                <li><a href="mybookings.html" class="active">My Bookings</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>My Bookings</h1>
+            <p>Track and manage all your travel reservations</p>
+        </div>
+    </section>
+
+    <section class="bookings-section">
+        <div class="container">
+            <div class="bookings-header">
+                <h2>Your Travel History</h2>
+                <a href="booking.html" class="btn btn-primary">Book New Trip</a>
+            </div>
+
+            <div class="bookings-list" id="bookingsList">
+                <div class="booking-item">
+                    <div class="booking-status status-confirmed">Confirmed</div>
+                    <div class="booking-details">
+                        <div class="booking-main">
+                            <h3>Paris, France</h3>
+                            <div class="booking-route">
+                                <span class="route-from">New York</span>
+                                <span class="route-arrow">✈️</span>
+                                <span class="route-to">Paris</span>
+                            </div>
+                        </div>
+                        <div class="booking-info">
+                            <div class="info-item">
+                                <span class="info-label">Departure:</span>
+                                <span class="info-value">Dec 15, 2024</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Return:</span>
+                                <span class="info-value">Dec 20, 2024</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Travelers:</span>
+                                <span class="info-value">2 Adults</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Total:</span>
+                                <span class="info-value price-highlight">$1,798</span>
+                            </div>
+                        </div>
+                        <div class="booking-actions">
+                            <button class="btn-action btn-view">View Details</button>
+                            <button class="btn-action btn-cancel">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-item">
+                    <div class="booking-status status-pending">Pending</div>
+                    <div class="booking-details">
+                        <div class="booking-main">
+                            <h3>Bali, Indonesia</h3>
+                            <div class="booking-route">
+                                <span class="route-from">Los Angeles</span>
+                                <span class="route-arrow">✈️</span>
+                                <span class="route-to">Bali</span>
+                            </div>
+                        </div>
+                        <div class="booking-info">
+                            <div class="info-item">
+                                <span class="info-label">Departure:</span>
+                                <span class="info-value">Jan 10, 2025</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Return:</span>
+                                <span class="info-value">Jan 17, 2025</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Travelers:</span>
+                                <span class="info-value">2 Adults, 1 Child</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Total:</span>
+                                <span class="info-value price-highlight">$2,247</span>
+                            </div>
+                        </div>
+                        <div class="booking-actions">
+                            <button class="btn-action btn-view">View Details</button>
+                            <button class="btn-action btn-cancel">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-item">
+                    <div class="booking-status status-completed">Completed</div>
+                    <div class="booking-details">
+                        <div class="booking-main">
+                            <h3>Santorini, Greece</h3>
+                            <div class="booking-route">
+                                <span class="route-from">Chicago</span>
+                                <span class="route-arrow">✈️</span>
+                                <span class="route-to">Santorini</span>
+                            </div>
+                        </div>
+                        <div class="booking-info">
+                            <div class="info-item">
+                                <span class="info-label">Departure:</span>
+                                <span class="info-value">Aug 5, 2024</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Return:</span>
+                                <span class="info-value">Aug 11, 2024</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Travelers:</span>
+                                <span class="info-value">2 Adults</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Total:</span>
+                                <span class="info-value price-highlight">$2,198</span>
+                            </div>
+                        </div>
+                        <div class="booking-actions">
+                            <button class="btn-action btn-view">View Details</button>
+                            <button class="btn-action btn-review">Write Review</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="empty-bookings" id="emptyBookings" style="display: none;">
+                <div class="empty-icon">📋</div>
+                <h3>No Bookings Yet</h3>
+                <p>Start planning your next adventure!</p>
+                <a href="booking.html" class="btn btn-primary">Book Your First Trip</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TravelWise</h3>
+                    <p>Your trusted travel partner for unforgettable journeys around the world.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                        <li><a href="mybookings.html">My Bookings</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@travelwise.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TravelWise. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
