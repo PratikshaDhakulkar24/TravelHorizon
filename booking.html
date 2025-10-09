@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Trip - TravelWise</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">TravelWise</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="booking.html" class="active">Book Now</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Book Your Dream Trip</h1>
+            <p>Fill in the details below and we'll get back to you shortly</p>
+        </div>
+    </section>
+
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-container">
+                <form class="booking-form" id="bookingForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="destination">Select Destination</label>
+                        <select id="destination" name="destination" required>
+                            <option value="">Choose a destination</option>
+                            <option value="paris">Paris, France - $899</option>
+                            <option value="bali">Bali, Indonesia - $749</option>
+                            <option value="santorini">Santorini, Greece - $1,099</option>
+                            <option value="maldives">Maldives - $1,499</option>
+                            <option value="london">London, UK - $799</option>
+                            <option value="dubai">Dubai, UAE - $1,199</option>
+                            <option value="tokyo">Tokyo, Japan - $1,299</option>
+                            <option value="newyork">New York, USA - $949</option>
+                            <option value="rome">Rome, Italy - $849</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="departureDate">Departure Date</label>
+                            <input type="date" id="departureDate" name="departureDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="returnDate">Return Date</label>
+                            <input type="date" id="returnDate" name="returnDate" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="adults">Number of Adults</label>
+                            <input type="number" id="adults" name="adults" min="1" max="10" value="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="children">Number of Children</label>
+                            <input type="number" id="children" name="children" min="0" max="10" value="0">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="accommodation">Accommodation Type</label>
+                        <select id="accommodation" name="accommodation" required>
+                            <option value="">Select accommodation</option>
+                            <option value="standard">Standard Room</option>
+                            <option value="deluxe">Deluxe Room</option>
+                            <option value="suite">Suite</option>
+                            <option value="villa">Private Villa</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="specialRequests">Special Requests (Optional)</label>
+                        <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="Any special requirements or preferences..."></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" name="newsletter" id="newsletter">
+                            Subscribe to our newsletter for exclusive deals
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">Submit Booking Request</button>
+                </form>
+
+                <div class="booking-summary">
+                    <h3>Why Book With Us?</h3>
+                    <div class="summary-item">
+                        <span class="summary-icon">✓</span>
+                        <div>
+                            <h4>Best Price Guarantee</h4>
+                            <p>We offer the most competitive rates</p>
+                        </div>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-icon">✓</span>
+                        <div>
+                            <h4>24/7 Customer Support</h4>
+                            <p>We're here to help anytime</p>
+                        </div>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-icon">✓</span>
+                        <div>
+                            <h4>Flexible Cancellation</h4>
+                            <p>Free cancellation up to 48 hours</p>
+                        </div>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-icon">✓</span>
+                        <div>
+                            <h4>Secure Payment</h4>
+                            <p>Your data is safe with us</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="confirmationMessage" class="confirmation-message">
+                <div class="confirmation-content">
+                    <div class="confirmation-icon">✓</div>
+                    <h3>Booking Request Submitted!</h3>
+                    <p>Thank you for choosing TravelWise. We'll contact you within 24 hours to confirm your booking.</p>
+                    <button class="btn btn-primary" onclick="closeConfirmation()">Close</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TravelWise</h3>
+                    <p>Your trusted travel partner for unforgettable journeys around the world.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="explore.html">Explore</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@travelwise.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TravelWise. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
