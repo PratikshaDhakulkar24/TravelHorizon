@@ -28,18 +28,4 @@ Travel Horizon is a modern and responsive travel website designed to inspire use
 
 🔗 https://your-username.github.io/travel-horizon/
 
----
 
-## 📸 Screenshots
-
-_Add screenshots of your website here_
-
----
-
-## 📂 Project Setup
-
-To run this project locally:
-
-```bash
-npm install
-npm run dev
